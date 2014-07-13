@@ -1,0 +1,261 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Page pour Mobile</title> 
+        <<meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+				<link rel="stylesheet" href="css/styles.css" charset="UTF-8"/>
+
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+				<script src="js/scripts.js"></script>
+    </head> 
+    <body>
+			<!--======================================== PAGE ACCUEIL =========================================-->
+			<div data-role="page" id="pgIndex">
+				
+				<div data-role="header" data-position="fixed" class="header">
+					<h1>Accueil</h1>
+				</div>
+
+				<div data-role="content">
+				 <!-- contenu -->
+					<a data-transition="slide" href="#pgListeRecettes" class="btn_recette btn_wide">Liste des recettes</a>
+					<a data-transition="slide" href="#pgListeChefs" class="btn_recette btn_wide">Liste des chefs</a>
+					<a data-transition="slide" href="#pgRecherche" class="btn_recette btn_wide">Recherche</a>
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+				
+			</div><!--./page-accueil-->
+			
+			<!--======================================== PAGE LISTE DE RECETTES =============================================-->
+			<div data-role="page" id="pgListeRecettes" data-add-back-btn="true">
+				<div data-role="header" data-position="fixed" class="header">
+					<a data-rel="back" href="#" data-transition="slide" data-direction="reverse" class="back-button">Back</a>
+					<h1>Liste de Recettes</h1>
+				</div>
+
+				<div data-role="content">
+				 <!-- contenu -->
+						<a data-transition="slide" href="#pgRecette" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Recette 1</a>
+						<a data-transition="slide" href="" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Recette 2</a>
+						<a data-transition="slide" href="" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Recette 3</a>
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+			</div><!--./page-listeRecettes -->
+			
+			<!--============================================== PAGE LISTE DE CHEF ======================================================-->
+			<div data-role="page" id="pgListeChefs" data-add-back-btn="true">
+				<div data-role="header" data-position="fixed" class="header">
+					<a data-rel="back" href="#" data-transition="slide" data-direction="reverse" class="back-button">Back</a>
+					<h1>Liste de Chefs</h1>
+				</div>
+
+				<div data-role="content">
+				 <!-- contenu -->
+						<a data-transition="slide" href="#pgChef" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Chef 1</a>
+						<a data-transition="slide" href="" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Chef 2</a>
+						<a data-transition="slide" href="" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Chef 3</a>
+						<a data-transition="slide" href="" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Chef 4</a>
+						<a data-transition="slide" href="" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Chef 5</a>
+						<a data-transition="slide" href="" class="btn_recette btn_wide"><img src="img/Gambas_thumb.jpg" alt="thumb"/>Chef 6</a>
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+			</div><!--./page-listeChefs -->
+			<!--============================================== PAGE RECETTE ======================================================-->
+			<div data-role="page" id="pgRecette" data-add-back-btn="true">
+				<div data-role="header" data-position="fixed" class="header">
+					<a data-rel="back" href="#" data-transition="slide" data-direction="reverse"  class="back-button">Back</a>
+					<h1>Recette</h1>
+				</div>
+
+				<div data-role="content">
+					<div id="image-wrapper">
+						<img src="img/Gambas.jpg" alt="Image Recette"/>
+					</div>
+					
+					<a data-transition="slide" href="#pgPrep" data-role="" class="btn_recette">Pr&eacute;paration</a>
+					<a data-transition="slide" href="" data-role="" class="btn_recette">Petit plus du chef</a>
+					<a data-transition="slide" href="" data-role="" class="btn_recette">Recettes Similaires</a>
+					<a data-transition="slide" href="#pgChef" data-role="" class="btn_recette">Chef</a>
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+			</div><!--./page-recette -->
+			<!--============================================== PAGE PREPARATION ======================================================-->
+			<div data-role="page" id="pgPrep" data-add-back-btn="true">
+				<div class="pgWrapper">
+					<div data-role="header" data-position="fixed" class="header">
+						<a data-rel="back" href="#" data-transition="slide" data-direction="reverse"  class="back-button">Back</a>
+						<h1>Recette</h1>
+					</div>
+
+					<div data-role="content">
+						<div class="left_prep">
+							<img src="img/Gambas.jpg" alt="Gambas">
+							<h2>Ingr&eacute;dients</h2>
+					        <ul id="recette-ingredients">
+					            <li>100gr mangue</li>
+					            <li>100gr jus d&#39;orange</li>
+					            <li>Gingembre</li>
+					            <li>Sel</li>
+					            <li>Poivre</li>
+					            <li>1cl &agrave; soupe vinaigre de vin</li>
+					            <li>2cl &agrave; soupe huile d&#39;olive</li>
+					            <li>Cuisson homard</li>
+					            <li>Sel, poivre, thym, laurier, fenouil sec</li>
+					            <li>Tagliatelle de l&eacute;gumes</li>
+					            <li>200gr carotte</li>
+					            <li>200gr courgette</li>
+					            <li>100gr c&eacute;leri boule</li>
+					            <li>Cumin</li>
+					            <li>Vinaigre balsamique</li>
+					            <li>Coriandre</li>
+					    
+					        </ul>
+						</div>
+						<div class="right_prep">
+							<h2>Pr&eacute;paration</h2>
+				            <p>
+				            <b>Cuire les homards</b> dans un court bouillon de sel, poivre, thym, laurier, fenouil sec. A &eacute;bullition plongez les homards et faites cuire pendant 10 minutes, ensuite sortez les du bouillon.</p><p>Pour <b>la sauce mangue orange</b> mettez les 100 gr de pulpe de mangue et 100 gr de jus d&#39;orange dans le mixer avec une r&acirc;p&eacute; de gingembre, sel, poivre, 1 cuill&egrave;re &agrave; soupe de vinaigre de vin et 2 cl &egrave; soupe d&#39;huile d&#39;olive extra, mixez et rectifiez l&#39;assaisonnement.</p><p><b>Tagliatelles</b> : Emincez carotte, courgette et c&eacute;leri boule dans le sens de la longueur &agrave; la mandoline et puis coupez en lamelles d&#39;un demi centim&egrave;tre, faites cuire s&eacute;par&eacute;ment &agrave; l&#39;eau bien sal&eacute;e pendant quelques minutes et  faites refroidir dans de l&#39;eau glac&eacute;e, puis assaisonnez avec sel, poivre, cumin, huile d&#39;olive, vinaigre balsamique</p><p><b>D&eacute;cortiquez</b> les homards en gardant les t&ecirc;tes, les pattes et les queues.</p><p>Finition<br><b>Posez les tagliatelles de l&eacute;gumes, puis les homards coup&eacute;s en rondelles sur les l&eacute;gumes, ajoutez la sauce et quelques feuilles de coriandre</b>
+				            </p>
+						</div>
+					</div>
+
+					<div data-role="footer" data-position="fixed" class="foot">
+					  <!-- footer -->
+					PUB
+					</div>
+				</div>
+			</div><!--./page-preparation -->
+			<!--============================================== PAGE CHEF ======================================================-->
+			<div data-role="page" id="pgChef" data-add-back-btn="true">
+				<div data-role="header" data-position="fixed" class="header">
+					<a data-rel="back" href="#" data-transition="slide" data-direction="reverse"  class="back-button">Back</a>
+					<h1>Chef</h1>
+				</div>
+
+				<div data-role="content">
+						<img style="width:100%;" src="img/Chef.jpg" alt="Image Chef"/>
+						<div class="left_chef">
+							<h2>Ses Plats</h2>
+							<a href="" class="btn_recette btn_wide btn_chef">Plat</a>
+							<a href="" class="btn_recette btn_wide btn_chef">Plat</a>
+							<a href="" class="btn_recette btn_wide btn_chef">Plat</a>
+						</div>
+						<div class="right_chef">
+							<h2>Biographie</h2>
+							<span if="bio">
+							
+							</span>
+						</div>
+					
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+			</div><!--./page-chef -->
+			<!--============================================== PAGE RECHERCHE ======================================================-->
+			<div data-role="page" id="pgRecherche" data-add-back-btn="true">
+				<div data-role="header" data-position="fixed" class="header">
+					<a data-rel="back" href="#" data-transition="slide" data-direction="reverse" class="back-button">Back</a>
+					<h1>Recherche</h1>
+				</div>
+
+				<div data-role="content">
+				 <!-- contenu -->
+						<a href="#pgRechercheRecette" data-transition="slide" class="btn_recette btn_wide">Recherche par Recette</a>
+						<a href="#pgRechercheChef" data-transition="slide" class="btn_recette btn_wide">Recherche par Chef</a>
+						<a href="#pgRechercheCategorie" data-transition="slide" class="btn_recette btn_wide">Recherche par Categorie</a>					
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+			</div><!--./page-recherche -->
+			<!--============================================== PAGE RECHERCHE RECETTE ======================================================-->
+			<div data-role="page" id="pgRechercheRecette" data-add-back-btn="true">
+				<div data-role="header" data-position="fixed" class="header">
+					<a data-rel="back" href="#" data-transition="slide" data-direction="reverse"  class="back-button">Back</a>
+					<h1>Par recette</h1>
+				</div>
+
+				<div data-role="content">
+	                <form>
+						<label>Nom de Recette    : <input type="text" name="recette" id="" value=""></label>
+						<input type="submit" id="recette-recherche" name="recherche" value="Recherche">
+					</form>
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+			</div><!--./page-recherche-recette -->
+			<!--============================================== PAGE RECHERCHE CHEF ======================================================-->
+			<div data-role="page" id="pgRechercheChef" data-add-back-btn="true">
+				<div data-role="header" data-position="fixed" class="header">
+					<a data-rel="back" href="#" data-transition="slide" data-direction="reverse" class="back-button">Back</a>
+					<h1>Par chef</h1>
+				</div>
+
+				<div data-role="content">
+	                <form>
+						<label>Nom    : <input type="text" name="recette" id="txtNomChef" value=""></label>
+						<label>Prenom : <input type="text" name="recette" id="txtPrenomChef" value=""></label>									
+						<input type="submit" name="recherche" value="Recherche" >
+					</form>
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+			</div><!--./page-recherche-chef -->
+			<!--============================================== PAGE RECHERCHE CATEGORIE ======================================================-->
+			<div data-role="page" id="pgRechercheCategorie" data-add-back-btn="true">
+				<div data-role="header" data-position="fixed" class="header">
+					<a data-rel="back" href="#" data-transition="slide" data-direction="reverse" class="back-button">Back</a>
+					<h1>Par categorie</h1>
+				</div>
+
+				<div data-role="content">
+	                <form>
+						<label><input type="checkbox" name="recette" id="chk-sportif" value="sprt">Recettes Sportif</label>
+						<label><input type="checkbox" name="recette" id="chk-vegetarien" value="vegt">Recettes Vegetarien</label>
+						<label><input type="checkbox" name="recette" id="chk-vegetalien" value="vegl">Recettes Vegetalien</label>
+						<label><input type="checkbox" name="recette" id="chk-pascher" value="pach">Recettes &agrave; faible cout</label>
+						<label><input type="checkbox" name="recette" id="chk-gluten" value="glut">Recettes sans Gluten</label>
+						<label><input type="checkbox" name="recette" id="chk-dietetique" value="diab">Recetes Dietetiques</label>
+						
+						<input type="submit" name="recherche" value="Recherche" id="recette-recherche">
+					</form>
+				</div>
+
+				<div data-role="footer" data-position="fixed" class="foot">
+				  <!-- footer -->
+				PUB
+				</div>
+			</div><!--./page-recherche-categorie -->
+    </body>
+</html>
