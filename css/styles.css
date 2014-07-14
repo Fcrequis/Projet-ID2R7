@@ -159,3 +159,9 @@ form .ui-btn:hover{
 	margin-top: -16px;
 	margin-bottom: 10px;
 }
+.ui-table{width:100%;}
+.ui-table tr{border-bottom:1px solid #AAA;}
+.ui-table td,.ui-table th{
+	text-align:center;
+	font-size:14px;
+}
